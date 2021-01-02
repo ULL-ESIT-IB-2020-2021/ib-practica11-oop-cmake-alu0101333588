@@ -9,7 +9,7 @@ using namespace std;
 
 
 int main(int argc, char*argv[]){
-    /*Usage(argc, argv);*/
+    Usage(argc, argv);
     ofstream output_file(argv[5]);
     int dia = 0, mes = 0, ano = 0, N = 1, j =0;
     bool resultadoBool, resultadoBool2;
