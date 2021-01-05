@@ -19,10 +19,6 @@ int main(int argc, char*argv[]){
     ofstream escritura_fichero(fEscritura);
     string tanda1, tanda2;
 
-    /*while(getline(input_fichero, linea)){
-        
-    }*/
-
     if (!lectura_fichero){
         cerr << "***ERROR*** El archivo de lectura no se ha podido abrir correctamente" << endl;
         exit(EXIT_SUCCESS);
