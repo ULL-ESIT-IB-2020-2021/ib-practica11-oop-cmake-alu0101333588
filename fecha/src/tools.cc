@@ -13,7 +13,7 @@
  *  @param[in] argv Vector containing (char*) the parameters
  */
 void Usage(int argc, char *argv[]) {
-  if (argc != 7) {
+  if (argc != 4) {
     std::cout << argv[0] << ": Falta un parámetro" << std::endl;
     std::cout << "Pruebe " << argv[0] << " --help para más información" << std::endl;
     exit(EXIT_SUCCESS);

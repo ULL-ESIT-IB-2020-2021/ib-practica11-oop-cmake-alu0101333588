@@ -10,14 +10,36 @@ using namespace std;
 
 int main(int argc, char*argv[]){
     Usage(argc, argv);
-    ofstream output_file(argv[5]);
-    int dia = 0, mes = 0, ano = 0, N = 1, j =0;
+    ofstream output_file(argv[3]);
+    int dia = 0, mes = 0, ano = 0, N = 0, j =0;
     bool resultadoBool, resultadoBool2;
     string bisiesto = "Sí ";
-    dia = stoi(argv[1]);
-    mes = stoi(argv[2]);
-    ano = stoi(argv[3]);
-    N = stoi(argv[4]);
+
+    string line = argv[1];
+    int i, posicion; 
+    string dd{""}, mm{""}, aa{""};
+
+    for(i = 0; line[i] != '/'; i++){
+        dd = dd + line[i];
+        posicion = i + 1;
+    }
+
+    for(i = posicion + 1; line[i] != '/'; i++){
+        mm = mm + line[i];
+        posicion = i + 1;
+               
+    }
+
+    for(i = posicion + 1; line[i] != ' '; i++){
+        aa = aa + line[i];
+               
+    }
+
+    dia = stoi(dd);
+    mes = stoi(mm);
+    ano = stoi(aa);
+    N = stoi(argv[2]);
+
     Fecha fecha{dia, mes, ano};
     string nombreFichero = argv[5];
 
@@ -46,6 +68,8 @@ int main(int argc, char*argv[]){
             j++;
         }
     } 
+
+    cout << "Final del proceso" << endl;
 
     return 0;
 
