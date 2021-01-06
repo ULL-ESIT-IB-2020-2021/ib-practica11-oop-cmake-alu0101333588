@@ -84,7 +84,7 @@ int main(int argc, char*argv[]){
         
     }
 
-    cout << "MISIÓN COMPLIDA. Revisa tu .txt " << endl;
+    cout << "MISIÓN CUMPLIDA. Revisa el archivo: " << fEscritura << endl;
 
     return 0;
 
